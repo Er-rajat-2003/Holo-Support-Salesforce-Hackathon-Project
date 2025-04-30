@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="AR Case Visualizer">
+    <template if:true={cases}>
+      <template for:each={cases} for:item="caseItem">
+        <div key={caseItem.Id}>
+          <button data-id={caseItem.Id} onclick={handleMarkerClick}>
+            {caseItem.CaseNumber} - {caseItem.Subject}
+          </button>
+        </div>
+      </template>
+    </template>
+  </lightning-card>
+</template>

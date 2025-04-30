@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Live Agent Overlay">
+    <lightning-button
+      label="Start AR Session"
+      onclick={startSession}
+    ></lightning-button>
+
+    <template if:true={sessionStatus}>
+      <p>Status: {sessionStatus}</p>
+    </template>
+
+    <template if:true={error}>
+      <p>Error: {error}</p>
+    </template>
+  </lightning-card>
+</template>

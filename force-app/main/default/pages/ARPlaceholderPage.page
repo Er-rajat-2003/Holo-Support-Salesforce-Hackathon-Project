@@ -1,0 +1,8 @@
+<apex:page>
+    <h1 style="text-align:center;">AR Interaction Simulation</h1>
+    <div style="text-align:center; margin-top:30px;">
+        <img src="{!URLFOR($Resource.AR_Demo)}" alt="AR Demo GIF" style="max-width:600px; border:1px solid #ddd; border-radius:10px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"
+        />
+        <p style="margin-top:20px; font-size:16px;">This is your simulated AR interaction zone 🚀</p>
+    </div>
+</apex:page>

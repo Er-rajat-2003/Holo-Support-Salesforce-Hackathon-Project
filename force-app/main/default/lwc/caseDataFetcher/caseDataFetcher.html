@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="Case Data Fetcher">
+    <template if:true={cases}>
+      <ul>
+        <template for:each={cases} for:item="caseItem">
+          <li key={caseItem.Id}>{caseItem.CaseNumber} - {caseItem.Subject}</li>
+        </template>
+      </ul>
+    </template>
+    <template if:true={error}>
+      <p>Error: {error}</p>
+    </template>
+  </lightning-card>
+</template>

@@ -1,0 +1,20 @@
+<template>
+  <lightning-card title="HoloSupport Main Dashboard">
+    <lightning-button
+      label="Load Knowledge Articles"
+      onclick={handleLoadArticles}
+    ></lightning-button>
+
+    <template if:true={articles}>
+      <ul>
+        <template for:each={articles} for:item="article">
+          <li key={article.Id}>{article.Name} - {article.Article_Body__c}</li>
+        </template>
+      </ul>
+    </template>
+
+    <template if:true={error}>
+      <p>Error: {error}</p>
+    </template>
+  </lightning-card>
+</template>
